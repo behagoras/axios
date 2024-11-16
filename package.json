@@ -5,10 +5,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "node bin/ssl_hotfix.js grunt test && node bin/ssl_hotfix.js dtslint",
     "start": "node ./sandbox/server.js",
-    "preversion": "grunt version && npm test",
-    "build": "cross-env NODE_ENV=production grunt build",
     "examples": "node ./examples/server.js",
     "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "fix": "eslint --fix lib/**/*.js"
@@ -44,7 +41,6 @@
     "es6-promise": "^4.2.8",
     "express": "^4.18.1",
     "formidable": "^2.0.1",
-    "grunt": "^1.4.1",
     "grunt-banner": "^0.6.0",
     "grunt-cli": "^1.4.3",
     "grunt-contrib-clean": "^2.0.0",
